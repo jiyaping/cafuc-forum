@@ -1,0 +1,292 @@
+body, p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size:   13px;
+  line-height: 18px;
+}
+
+
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a { color: #000;text-decoration:none; }
+a:visited { color: #c75f3e; }
+a:hover { color: #fff; background-color:#000; }
+
+.fieldWithErrors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#errorExplanation {
+  width: 400px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+#notice {
+	padding: 5px;
+    margin: 0px;
+	background-color: #FFCC80;
+}
+
+#tags_update {
+  font-size: 75%;
+  font-weight: normal;
+  margin: 0px;
+  padding: 0px;
+  border:1px solid black;
+  background-color: white;
+}
+
+
+#menu ul {
+  padding: 2px;
+  margin: 2px;
+  list-style: none;
+  border-top: 5px solid #B36B00;
+  border-bottom: 1px solid grey;
+}
+
+#menu ul li {
+  margin: 0px;
+  padding-left:10px;
+  padding-right: 10px;
+  display: inline;
+}
+
+#menu a, #menu a:visited, #menu a:active {
+  font-weight: bold;
+  color: black;
+  font-size: 110%;
+  text-decoration:none;
+}
+
+#menu a:active {
+  background-color: grey;
+}
+
+#menu a:hover {
+  color: white;
+}
+
+#visit{
+  margin:0px;
+  padding:0px;
+  border-bottom:1px solid grey; 
+}
+
+#visit p{
+  margin:0px;
+  font-size:90%;
+}
+
+#header{
+}
+
+#content {
+  margin-top:10px;    
+  padding-bottom: 15px;
+  border-bottom: 1px solid grey;
+}
+
+#logo {
+  font-size: 250%;
+  font-style:italic;
+}
+
+
+#footer {
+  width: 100%;
+  text-align: center;
+}
+
+#slogan {
+  position: relative;
+  font-size: 100%;
+  margin: 0px;
+  line-height: 0px;
+  top: -10px;
+  left: 80px;
+}
+
+dt {
+  font-weight: bold;
+}
+
+body {
+  background-color: #fff; color: #333;
+  margin-right: 230px;
+}
+
+.category{
+    border:1px solid #CAE8EA;
+    margin-top:10px;
+}
+
+.category #name{
+    border-bottom:2px solid #CAE8EA ;
+    background-color:#CAE8EA;
+    padding:0px;
+    margin:0px;
+    font-size:105%;
+    font-weight:bold;
+}
+
+.category a{
+    text-decoration:none;
+}
+
+.category span{
+    float:right;
+    font-size:90%;
+    font-weight:normal;
+}
+
+
+#mytable {
+width: 1040px;
+padding: 0;
+margin: 0;
+}
+
+caption {
+padding: 0 0 5px 0;
+width: 700px;
+font: italic 11px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+text-align: right;
+} 
+
+th.nobg {
+border-top: 0;
+border-left: 0;
+border-right: 1px solid #C1DAD7;
+background: none;
+} 
+
+th {
+font: bold 11px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+color: #4f6b72;
+border-right: 1px solid #C1DAD7;
+border-bottom: 1px solid #C1DAD7;
+border-top: 1px solid #C1DAD7;
+letter-spacing: 2px;
+text-transform: uppercase;
+text-align: center;
+padding: 6px 6px 6px 12px;
+background: #CAE8EA  no-repeat;
+} 
+th.spec {
+border-left: 1px solid #C1DAD7;
+border-top: 0;
+background: #fff no-repeat;
+font: bold 10px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+} 
+th.specalt {
+border-left: 1px solid #C1DAD7;
+border-top: 0;
+background: #f5fafa no-repeat;
+font: bold 10px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+color: #797268;
+} 
+td.alt {
+background: #F5FAFA;
+color: #797268;
+}
+td {
+border-right: 1px solid #C1DAD7;
+border-bottom: 1px solid #C1DAD7;
+background: #fff;
+font-size:11px;
+padding: 6px 6px 6px 12px;
+color: #4f6b72;
+} 
+
+body {
+font: normal 11px auto "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+color: #4f6b50;
+background: #E6EAE9;
+}
+
+.showDetialPost{
+    border:1px solid #C1DAD7;
+    height:152px;
+    width:1020px;
+    margin:5px;
+}
+
+#righttop{
+    float:right;
+    border:1px solid #C1DAD7;
+    height:20px;
+    width:790px;
+    margin:0px;
+    padding:0px;
+}
+#rightbButtom{
+    float:right;
+    border:1px solid #C1DAD7;
+    height:130px;
+    width:790px;
+    margin:0px;
+    clear:left;
+    padding:0px;
+}
+#leftTop{
+    border:1px solid #C1DAD7;
+    height:151px;
+    width:228px;
+    margin:0px;
+    padding:0px;
+}
+
+#replyLocation{
+    text-align:right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

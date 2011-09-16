@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">  
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title><%= @page_title || 'CAFUC' %></title>
+  <%= stylesheet_link_tag "style" %>
+  <%= javascript_include_tag :defaults%>
+</head>
+<body>
+
+<div id="header">
+  <h1 id="logo">Cafuc Forum</h1>
+  <h2 id="slogan">中国民航飞行学院论坛</h2>
+</div>
+
+<div id="menu">
+  <ul>
+    <li><a href="/forum/index">首页</a>&nbsp;|&nbsp;</li>
+    <li><a href="/user/index">用户列表</a>&nbsp;|&nbsp;</li>
+    <% if !session[:user_id]%>
+    <li><a href="/user/new">注册</a>&nbsp;|&nbsp;</li>
+    <li><a href="/user/login">登录</a>&nbsp;|&nbsp;</li>
+    <% else %>
+    <% @@user = User.find(session[:user_id])%>
+    <li><a href="/search/index">搜索</a>&nbsp;|&nbsp;</li>
+    <li><a href="/user/profile">个人信息</a>&nbsp;|&nbsp;</li>
+    <li><a href="/user/logout">注销</a>&nbsp;|&nbsp;</li>
+    <%if @@user.role_id==1%>
+    <li><a href="/forum/management">帖子管理</a>&nbsp;|&nbsp;</li>
+    <li><a href="/user/index">用户管理</a>&nbsp;|&nbsp;</li>
+    <% end %>
+    <% end %>
+  </ul>
+</div>
+
+
+<div id="visit">
+    <% if !session[:user_id]%>
+    <p>&nbsp;&nbsp;还没有登录 请登录或是注册</p>	
+    <% else %>
+    <p><span>欢迎你！<%= Role.find(@@user.role_id).role_name%>&nbsp;&nbsp;<%= @@user.username%></span>&nbsp;&nbsp;&nbsp;<span></span></p>
+    <% end %>
+</div>
+  
+<div id="content">
+  <% if flash[:notice] %>
+    <div id="notice">
+      <%= flash[:notice] %>
+    </div>
+  <% end %>    
+  <%= yield %>
+</div>
+
+<div id="footer">
+ powered by <span><strong>cafuc</strong></span>
+</div>
+  
+</body>
+</html>
+

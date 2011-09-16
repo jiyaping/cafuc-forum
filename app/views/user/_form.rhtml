@@ -1,0 +1,23 @@
+﻿<%= error_messages_for 'user' %>
+
+<!--[form:user]-->
+<p><label for="user_username">用户名</label><br/>
+<%= text_field 'user', 'username'  %></p>
+
+<p><label for="user_password">密码</label><br/>
+<%= password_field 'user', 'password'  %></p>
+<p><label for="password_comfirm">确认密码</label><br/>
+<%= password_field 'user','password_confirm'  %></p>
+
+
+<%= hidden_field 'user', 'lastest_post',:default=>'df'  %></p>
+<%= hidden_field 'user', 'created_at'  %></p>
+<%= hidden_field 'user', 'updated_at'  %></p>
+
+<p><label for="user_email">Email</label><br/>
+<%= text_field 'user', 'email'  %></p>
+
+<p><label for="user_QQ">QQ</label><br/>
+<%= text_field 'user', 'QQ'  %></p>
+<!--[eoform:user]-->
+

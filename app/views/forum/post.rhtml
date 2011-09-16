@@ -1,0 +1,13 @@
+﻿<%= error_messages_for 'post' %>
+<%= start_form_tag :action => 'create' %>
+  <%= hidden_field :post, :parent_id %>
+  <%= hidden_field :post, :category_id %>
+  <%= hidden_field 'post', 'user_id' %></p>
+  <p><label for="post_subject">标题</label><br/>
+  <%= text_field 'post', 'subject' %></p>
+  <p><label for="post_body">内容</label><br/>
+  <%= text_area 'post', 'body' %></p>
+
+  <%= submit_tag "发帖" %>&nbsp;&nbsp;
+  <%= link_to '返回',:action=>'index'%>
+<%= end_form_tag %>

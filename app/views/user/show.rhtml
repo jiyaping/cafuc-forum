@@ -1,0 +1,11 @@
+﻿<p>用户名:</b><%=h @user.username%></p>
+<p>用户角色:</b><%=h Post.role_name(@user)%></p>
+<p>密码:</b><%=h @user.password%></p>
+<p>最近发帖:</b><%=h @user.lastest_post.strftime("%Y年%M月%d日 %H:%M:%S") if !@user.lastest_post.nil?%></p>
+<p>创建时间:</b><%=h @user.created_at.strftime("%Y年%M月%d日 %H:%M:%S")%></p>
+<p>更新时间:</b><%=h @user.updated_at.strftime("%Y年%M月%d日 %H:%M:%S")%></p>
+<p>Email:</b><%=h @user.email%></p>
+<p>QQ:</b><%= @user.QQ%></p>
+
+<%= link_to '编辑', :action => 'edit', :id => @user %> |
+<%= link_to '返回', :action => 'list' %>

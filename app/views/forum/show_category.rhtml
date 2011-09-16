@@ -1,0 +1,17 @@
+﻿<%= link_to 'Previous page' , { :page => @post_pages.current.previous } if @post_pages.current.previous %>
+<%= link_to 'Next page' , { :page => @post_pages.current.next } if @post_pages.current.next %>
+<table id="mytable" cellspacing="0">
+    <tr>
+        <th scope="col">置顶</th>
+        <th scope="col">标题</th>
+        <th scope="col">发帖人</th>
+        <th scope="col">回复数</th>
+        <th scope="col">浏览次数</th>
+        <th scope="col">最后更新时间</th>
+    </tr>
+    <% for post in @posts%>
+        <%= display_as_post(post)%>
+    <% end %>
+</table>
+<%= link_to 'Previous page' , { :page => @post_pages.current.previous } if @post_pages.current.previous %>
+<%= link_to 'Next page' , { :page => @post_pages.current.next } if @post_pages.current.next %>

@@ -1,0 +1,38 @@
+﻿<h1>用户列表</h1>
+
+<table>
+  <tr>
+    <th>用户名</th>
+    <th>用户角色</th>
+    <th>最近发帖</th>
+    <th>创建时间</th>
+    <th>更新时间</th>
+    <th>Email</th>
+    <th>QQ</th>
+    <th>是否激活</th>
+  </tr>
+  
+<% for user in @users %>
+  <tr>
+     <td><%=h user.username%></td> 
+     <td><%=h Role.find(user.role_id).role_name%></td> 
+     <td><%=h user.lastest_post%></td> 
+     <td><%=h user.created_at.strftime("%Y年%M月%d日 %H:%M:%S")%></td> 
+     <td><%=h user.updated_at.strftime("%Y年%M月%d日 %H:%M:%S")%></td> 
+     <td><%=h user.email%></td> 
+     <td><%=h user.QQ%></td> 
+     <td><%=h user.if_active%></td>
+     <% if !session[:user_id].nil?&&User.find(session[:user_id]).role_id==1%>
+    <td><%= link_to '显示', :action => 'show', :id => user %></td>
+    <td><%= link_to '编辑', :action => 'edit', :id => user %></td>
+    <td><%= link_to '销毁', { :action => 'destroy', :id => user }, :confirm => '你确定吗？', :method => :post %><% end %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to '前页', { :page => @user_pages.current.previous } if @user_pages.current.previous %>
+<%= link_to '后页', { :page => @user_pages.current.next } if @user_pages.current.next %> 
+
+<br />
+
+<%= link_to '创建新用户', :action => 'new' %>

@@ -1,0 +1,9 @@
+﻿<h1>编辑用户</h1>
+
+<% form_tag :action => 'update', :id => @user do %>
+  <%= render :partial => 'form' %>
+  <%= submit_tag '确认' %>
+<% end %>
+
+<%= link_to '显示', :action => 'show', :id => @user %> |
+<%= link_to '返回', :action => 'list' %>

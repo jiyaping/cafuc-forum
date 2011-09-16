@@ -1,0 +1,6 @@
+﻿<h1>用户登录</h1>
+<% form_tag :action=>'login',:method=>'post' do%>
+   <p><label>用户名:<%= text_field_tag :username%></label></p>
+   <P><label>密&nbsp;&nbsp;码:<%= password_field_tag :password%></label></p>
+   <p><%= submit_tag '登录'%></p>
+<% end %>
